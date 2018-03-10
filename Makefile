@@ -8,3 +8,6 @@ run:
 
 remove:
 	docker rm -f squidguard
+
+test:
+	curl --proxy 0.0.0.0:3128 http://www.google.com/

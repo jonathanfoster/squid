@@ -10,6 +10,5 @@ docker run --name squidguard -d -p 3128:3128 --restart always jonathanfoster/squ
 
 ## More Information
 
-* [Alpine Linux](https://alpinelinux.org/)
 * [Squid](http://www.squid-cache.org/)
 * [SquidGuard](http://www.squidguard.org/)
