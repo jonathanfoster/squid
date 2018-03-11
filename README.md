@@ -19,6 +19,14 @@ Squid is configured to use basic authentication. Local traffic does not require 
 docker exec -it squidguard htpasswd -c /etc/squid/passwd $USERNAME
 ```
 
+## Shell Access
+
+For debugging and maintenance purposes, you may want to access the container's shell.
+
+```bash
+docker exec -it squidguard bash
+```
+
 ## More Information
 
 * [Squid](http://www.squid-cache.org/)
