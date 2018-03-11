@@ -11,5 +11,5 @@ COPY squidGuard.conf /etc/squidguard/
 
 EXPOSE 3128
 
-ENTRYPOINT ["squid"]
+ENTRYPOINT ["/usr/sbin/squid"]
 CMD ["-NYCd", "1"]
