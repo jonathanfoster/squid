@@ -21,13 +21,13 @@ docker exec -it squid htpasswd -c /etc/squid/passwd $USERNAME
 
 ## Domain Block List
 
-The domain block list is stored in `/etc/squid/blocklist/block`. You can block a specific subdomain
+The domain block list is stored in `/etc/squid/blocklist`. You can block a specific subdomain
 (e.g. `www.reddit.com`) or all subdomains (e.g. `.reddit.com`). Each blocked domain must be listed on a separate line.
 If the block list changes, you have to force Squid to reload the list by sending a SIGHUP signal.
 
 ```bash
 docker exec squid mkdir /etc/squid/blocklist/
-docker exec squid sh -c "echo '.reddit.com' > /etc/squid/blocklist/block"
+docker exec squid sh -c "echo '.reddit.com' > /etc/squid/blocklist"
 docker kill -s HUP squid
 ```
 
@@ -42,5 +42,5 @@ docker exec -it squid sh
 ## More Information
 
 * [Squid](http://www.squid-cache.org/)
-* [Authentication](https://wiki.squid-cache.org/Features/Authentication)
-* [Access Control Lists](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
+* [Squid Authentication](https://wiki.squid-cache.org/Features/Authentication)
+* [Squid Access Controls](https://wiki.squid-cache.org/SquidFaq/SquidAcl)
